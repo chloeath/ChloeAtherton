@@ -43,6 +43,16 @@
             font-size: 2rem;
           }
         }
+        &-subtitle {
+            font-weight: bold;
+            margin-bottom: 1.8rem;
+            font-size: $subtitle-font-size;
+            color: $primary-color;
+    
+            @include respond(phone) {
+              font-size: 2rem;
+            }
+          }
   
         & p > a {
           color: $secondary-color;
@@ -50,10 +60,11 @@
       }
   
       &__image {
-        width: 90%;
+        width: 40%;
+        height: 160%;
         margin: 0 auto;
   
-        @include respond(tab-land) {
+        @include respond(tab-land){
           width: 100%;
           margin: 0;
         }

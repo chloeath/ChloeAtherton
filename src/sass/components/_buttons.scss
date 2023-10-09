@@ -26,6 +26,8 @@
   @include supportColorForIE11();
   border-width: 2px;
   border-style: solid;
+  display: inline-block;
+  margin: 7px;
   -moz-border-image: -moz-linear-gradient(
     135deg,
     $primary-color 0%,
@@ -61,6 +63,7 @@
       135deg,
       $primary-color 0%,
       $secondary-color 100%
+     
     );
 
     @include respond(phone) {
@@ -81,6 +84,36 @@
     }
   }
 }
+
+/*skills*/
+.cta-btn--skill {
+  color: $white-color;
+  border: 2px solid $white-color;
+  background-color: transparent;
+  font-size: 12px;
+  display: inline;
+  margin: 5px;
+
+  /*
+  &::after {
+    background: $white-color;
+   }
+  */
+  &:hover {
+    //color: $secondary-color;
+    text-decoration: none;
+    transform: scale(1.1);
+    /*
+    &::after {
+      width: 100%;
+    }
+    */
+  }
+}
+
+
+
+
 
 /* Resume Style */
 .cta-btn--resume {

@@ -1,6 +1,13 @@
 #projects {
-  background-color: $white-color;
-  color: $dark-blue-text;
+  background-color: $primary-color;
+  background-image: linear-gradient(
+    135deg,
+    $primary-color 0%,
+    $secondary-color 100%
+  );
+  -webkit-clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
+  color: $white-color;
   margin-top: -10rem;
   padding-top: 15rem;
 
@@ -39,6 +46,16 @@
         margin-bottom: 1.8rem;
         font-size: $mid-font-size;
 
+        @include respond(phone) {
+          font-size: 2rem;
+        }
+      }
+
+      &-subtitle {
+        font-weight: bold;
+        margin-bottom: 1.8rem;
+        font-size: 15px;
+        color: $dark-blue-text ;
         @include respond(phone) {
           font-size: 2rem;
         }
